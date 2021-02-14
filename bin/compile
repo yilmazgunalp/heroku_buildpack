@@ -1,2 +1,7 @@
-echo ------> Nothing to compile
+#!/bin/sh
+echo "------> Nothing to compile"
+
+export  ROCKET_DATABASES={genapi_heroku_test={url=$DATABASE_URL}}
+echo $ROCKET_DATABASES
+export ROCKET_DATABASES
 exit 0
