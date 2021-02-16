@@ -1,7 +1,8 @@
 #!/bin/sh
 echo "------> Nothing to compile"
 
-export  ROCKET_DATABASES={genapi_heroku_test={url=$DATABASE_URL}}
+if [ -e "$ENV_DIR/DATABASE_URL" ]; then
+export ROCKET_DATABASES="{genapi_heroku_test={url=$DATABASE_URL}}"
+fi
 echo $ROCKET_DATABASES
-export ROCKET_DATABASES
 exit 0
