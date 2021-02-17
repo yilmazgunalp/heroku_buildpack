@@ -5,6 +5,7 @@ echo "-----> something  to compile"
 echo $1
 echo $2
 echo $3
+ls $3 | cat
 if [ -e "$ENV_DIR/DATABASE_URL" ]; then
 echo "yahoo"
 export ROCKET_DATABASES="{genapi_heroku_test={url=$(cat $ENV_DIR/DATABASE_URL)}}"
