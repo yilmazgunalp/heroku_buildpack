@@ -2,9 +2,12 @@
 echo "-----> Nothing to compile"
 echo "-----> something  to compile"
 
+echo $1
+echo $2
+echo $3
 if [ -e "$ENV_DIR/DATABASE_URL" ]; then
 echo "yahoo"
-export ROCKET_DATABASES="{genapi_heroku_test={url=$DATABASE_URL}}"
+export ROCKET_DATABASES="{genapi_heroku_test={url=$(cat $ENV_DIR/DATABASE_URL)}}"
 fi
 export ROCKET_PORT="$PORT"
 echo $ROCKET_PORT
