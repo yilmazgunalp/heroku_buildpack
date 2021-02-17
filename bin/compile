@@ -1,5 +1,6 @@
 #!/bin/sh
-echo "------> Nothing to compile"
+echo "-----> Nothing to compile"
+echo "-----> something  to compile"
 
 if [ -e "$ENV_DIR/DATABASE_URL" ]; then
 echo "yahoo"
