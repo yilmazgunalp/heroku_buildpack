@@ -3,6 +3,7 @@ echo "------> Nothing to compile"
 
 if [ -e "$ENV_DIR/DATABASE_URL" ]; then
 export ROCKET_DATABASES="{genapi_heroku_test={url=$DATABASE_URL}}"
+export ROCKET_PORT="$PORT"
 fi
 echo $ROCKET_DATABASES
 exit 0
