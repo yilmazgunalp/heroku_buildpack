@@ -8,9 +8,5 @@ echo $3
 ls $3 | cat
 if [ -e "$ENV_DIR/DATABASE_URL" ]; then
 echo "yahoo"
-export ROCKET_DATABASES="{genapi_heroku_test={url=$(cat $ENV_DIR/DATABASE_URL)}}"
 fi
-export ROCKET_PORT="$PORT"
-echo $ROCKET_PORT
-echo $ROCKET_DATABASES
 exit 0
